@@ -1,4 +1,4 @@
-c42de5574a6c45910a33aa5a8eaf2f33 *DESCRIPTION
+ba18d624b34e32127d38cc9625300229 *DESCRIPTION
 3e6a7e1893762ec0c5af8e4600e9de8f *NAMESPACE
 966c82bf53ea6905bb8547f4d3e1051e *R/R6_question.R
 91b89acd24895bbc6c948c0025b34472 *R/R6_survey.R
@@ -90,4 +90,4 @@ a48910a30d50e6a29e5de40e19c50758 *man/repeatStr.Rd
 0232b5db2b34deed0ff69481a1dbdab5 *tests/testthat/test-R6_question.R
 e5dd09785479f4bf12e3882ac6a4ce40 *tests/testthat/test-R6_survey.R
 6f559f2e83edee9cfce581a98e3fb747 *tests/testthat/test-ls_import_data.R
-4e4f87fb789861b8bb1c321449633c6c *tests/testthat/test-ls_read_tsv.R
+347680ab4c6f577ce2980f0dfc9ef3e7 *tests/testthat/test-ls_read_tsv.R
