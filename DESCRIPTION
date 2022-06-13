@@ -1,6 +1,6 @@
 Package: limonaid
 Title: Working with 'LimeSurvey' Surveys and Responses
-Version: 0.1.4
+Version: 0.1.5
 Authors@R: 
     c(person(given = "Gjalt-Jorn",
              family = "Peters",
@@ -28,8 +28,8 @@ RoxygenNote: 7.1.2
 Imports: httr (>= 1.4), jsonlite (>= 1.7), R6 (>= 2.4)
 Suggests: ggplot2, ggrepel, knitr, parallel, sticky, testthat
 NeedsCompilation: no
-Packaged: 2022-06-08 20:13:04 UTC; gjalt
+Packaged: 2022-06-13 19:21:46 UTC; gjalt
 Author: Gjalt-Jorn Peters [aut, cre] (<https://orcid.org/0000-0002-0336-9589>),
   Andrew Heiss [aut] (<https://orcid.org/0000-0002-3948-3914>)
 Repository: CRAN
-Date/Publication: 2022-06-08 20:30:03 UTC
+Date/Publication: 2022-06-13 22:00:10 UTC
