@@ -16,7 +16,7 @@
 
 get_session_key <- function(username = getOption('lime_username'),
                             password = getOption('lime_password'),
-                            plugin = getOption('lime_auth',defaultValue='Authdb')) {
+                            plugin = getOption('lime_auth',default='Authdb')) {
   body.json = list(method = "get_session_key",
                    id = " ",
                    params = list(admin = username,
