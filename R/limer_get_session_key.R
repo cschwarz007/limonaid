@@ -15,11 +15,13 @@
 #' }
 
 get_session_key <- function(username = getOption('lime_username'),
-                            password = getOption('lime_password')) {
+                            password = getOption('lime_password'),
+                            plugin = getOption('lime_auth')) {
   body.json = list(method = "get_session_key",
                    id = " ",
                    params = list(admin = username,
-                                 password = password))
+                                 password = password,
+                                 plugin = plugin))
 
     # Need to use jsonlite::toJSON because single elements are boxed in httr, which
   # is goofy. toJSON can turn off the boxing automatically, though it's not
