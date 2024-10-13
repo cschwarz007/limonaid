@@ -6,13 +6,15 @@
 \usage{
 get_session_key(
   username = getOption("lime_username"),
-  password = getOption("lime_password")
+  password = getOption("lime_password"),
+  plugin = getOption("lime_plugin"),
 )
 }
 \arguments{
 \item{username}{LimeSurvey username. Defaults to value set in \code{options()}.}
 
 \item{password}{LimeSurvey password Defaults to value set in \code{options()}.}
+\item{plugin}{LimeSurvey Authentication method- Defaults to value AuthDB, but can be set to AuthLDAP or AuthWebserver as well.}
 }
 \value{
 API token
