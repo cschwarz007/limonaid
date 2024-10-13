@@ -1,12 +1,9 @@
 #' Get a LimeSurvey API session key
 #'
-#' This function logs into the LimeSurvey API and provides an access
-#' session key. It was
-#' adapted by Gjalt-Jorn Peters from a function originally written by Andrew
-#' Heiss.
-#'
+#' This function logs into the LimeSurvey API and provides an access session key.
 #' @param username LimeSurvey username. Defaults to value set in \code{options()}.
 #' @param password LimeSurvey password Defaults to value set in \code{options()}.
+#' @param auth LimeSurvey Auth Plugin Defaults to value set in \code{options() - if no value set uses Authdb}.
 #' @return API token
 #' @import httr
 #' @export
@@ -19,7 +16,7 @@ get_session_key <- function(username = getOption('lime_username'),
                             plugin = getOption('lime_auth',default='Authdb')) {
   body.json = list(method = "get_session_key",
                    id = " ",
-                   params = list(admin = username,
+                   params = list(username = username,
                                  password = password,
                                  plugin = plugin))
 
@@ -29,12 +26,11 @@ get_session_key <- function(username = getOption('lime_username'),
   #   params = list(admin = unbox("username"), password = unbox("password"))
   # But that's a lot of extra work. So auto_unbox suffices here.
   # More details and debate: https://github.com/hadley/httr/issues/159
-  r <- httr::POST(getOption('lime_api'), httr::content_type_json(),
+  r <- POST(getOption('lime_api'), content_type_json(),
             body = jsonlite::toJSON(body.json, auto_unbox = TRUE))
 
-  session_key <- as.character(jsonlite::fromJSON(httr::content(r, encoding="utf-8"))$result)
+  session_key <- as.character(jsonlite::fromJSON(content(r, as='text', encoding="utf-8"))$result)
   session_cache$session_key <- session_key
-  options(limonaid_cache_session_key = session_key);
   session_key
 }
 
